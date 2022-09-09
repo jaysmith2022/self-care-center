@@ -1,31 +1,126 @@
+//class
+class Message {
+  constructor(mantra, affirmation) {
+    this.id = Date.now();
+    this.mantra = mantra;
+    this.affirmation = affirmation;
+  }
+}
+
+
+
+
+//Mantra
 var mantra = [
-  Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.
 
-Don’t let yesterday take up too much of today.
+`Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.`,
 
-Every day is a second chance.
+`Never let yesterday take up too much of today.`,
 
-Tell the truth and love everyone.
+`Every day is a second chance.`,
 
-I am free from sadness.
+`Tell the truth and love everyone.`,
 
-I am enough.
+`I am free from sadness.`,
 
-In the beginning it is you, in the middle it is you and in the end it is you.
+`I am enough.`,
 
-I love myself.
+`In the beginning it is you, in the middle it is you and in the end it is you.`,
 
-I am present now.
+`I love myself.`,
 
-Inhale the future, exhale the past.
+`I am present now.`,
 
-This too shall pass.
+`Inhale the future, exhale the past.`,
 
-Yesterday is not today.
+`This too shall pass.`,
 
-The only constant is change.
+`Yesterday is not today.`,
 
-Onward and upward.
+`The only constant is change.`,
 
-I am the sky, the rest is weather.
+`Onward and upward.`,
+
+`I am the sky, the rest is weather.`,
+
 ]
+
+var affirmation = [
+
+`I forgive myself and set myself free.`,
+
+`I believe I can be all that I want to be.`,
+
+`I am in the process of becoming the best version of myself.`,
+
+`I have the freedom & power to create the life I desire.`,
+
+`I choose to be kind to myself and love myself unconditionally.`,
+
+`My possibilities are endless.`,
+
+`I am worthy of my dreams.`,
+
+`I am enough.`,
+
+`I deserve to be healthy and feel good.`,
+
+`I am full of energy and vitality and my mind is calm and peaceful.`,
+
+`Every day I am getting healthier and stronger.`,
+
+`I honor my body by trusting the signals that it sends me.`,
+
+`I manifest perfect health by making smart choices.`,
+
+]
+
+//querySelectors
+var affirmationButton = document.querySelector(`#affirmation`)
+var mantraButton = document.querySelector(`#mantra`)
+var messageBox = document.querySelector(`.message-output-box`)
+var photoBell = document.querySelector(`.photo`)
+var viewMessageButton = document.querySelector(`.receive-message`)
+var radios = document.querySelectorAll('input')
+var inspirationalMessage = document.querySelector(".inspirational-message")
+var hideLogo = document.querySelector(`.photo`)
+
+
+
+//RANDOM Message VARIABLES
+var randomMantra = mantra[getRandomIndex(mantra)];
+var randomAffirmation = affirmation[getRandomIndex(affirmation)];
+
+//Event Listeners
+viewMessageButton.addEventListener(`click`, generateMessageHome);
+hideLogoClick.addEventListener(`click`)
+
+var newRandomMessage = new Message(randomMantra, randomAffirmation)
+//Page View
+function generateMessageHome() {
+  var newRandomMessage = new Message(randomMantra, randomAffirmation)
+  event.preventDefault()
+  inspirationalMessage.innerText = ``
+  // for (var i = 0; i < newRandomMessage.length; i++) {
+      // inspirationalMessage.innerText = inspirationalMessage.innerText +
+      // `<p class="inspirational-message">${mantra}</p>`
+  if (affirmationButton.checked === true) {
+    inspirationalMessage.innerText = getRandomIndex(affirmation)
+  } else if (mantraButton.checked === true) {
+    inspirationalMessage.innerText = getRandomIndex(mantra)
+    hiddenLogo()
+}
+}
+
+// function hiddenLogo() {
+// if (inspirationalMessage === true) {
+//   .svg = false;
+// }
+// }
+
+
+
+function getRandomIndex(array) {
+  var index = Math.floor(Math.random() * array.length);
+  return array[index]
+}
