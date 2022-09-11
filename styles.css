@@ -13,6 +13,11 @@ html {
 .hidden {
 display: none;
 }
+/*
+#testing p:nth-of-type(1) {
+  color: white;
+  font-weight: bold;
+} */
 
 
 body {
@@ -24,8 +29,14 @@ align-items: stretch;
 align-content: stretch;
 background-size: 100%;
 background-image: linear-gradient(to bottom, #134d71, #295d80, #3c6d90, #4e7ea0, #608fb0, #649fb9, #6daec0, #7abdc5, #90cabd, #b0d5b6, #d4ddb6, #f7e4bf);
+font-family: 'Quicksand', sans-serif;
+color: #ffffff;
 
+}
 
+p {
+    margin-left: 10px;
+    font-weight: bold;
 }
 
 .header {
@@ -52,6 +63,10 @@ h2 {
   width: 500px;
 
 }
+h3 {
+    margin-bottom: -20px
+
+}
 
 .main-page {
   	display: flex;
@@ -61,7 +76,18 @@ h2 {
   	align-items: stretch;
   	align-content: stretch;
     font-family: 'Quicksand', sans-serif;
+    color: black;
   }
+
+  .login-page {
+    	display: flex;
+    	flex-direction: column;
+    	flex-wrap: nowrap;
+    	justify-content: space-between;
+    	align-items: stretch;
+    	align-content: stretch;
+      font-family: 'Quicksand', sans-serif;
+    }
 
 .choice-box {
 
@@ -69,7 +95,8 @@ h2 {
   margin: 60px;
   margin-left: auto;
   margin-right: auto;
-  margin-block: 63px;
+  margin-bottom: 100px;
+  margin-top: 40px;
   height: 110px;
   width: 500px;
   background-color: #ffffff;
@@ -117,6 +144,9 @@ label[for=affirmation] {
   position: relative;
   border-radius: 10px;
 }
-.photo {
-margin-left: 900px;
+.meditate-img {
+  max-width: 9%;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
 }
