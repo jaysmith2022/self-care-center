@@ -160,7 +160,9 @@ var randomAffirmation = affirmation[getRandomIndex(affirmation)];
 
 //Event Listeners
 viewMessageButton.addEventListener(`click`, generateMessageHome);
-// signInButton.addEventListener(`click`, logIn);
+// signInButton.addEventListener("click`, `ogIn);
+signInButton.addEventListener(`click`, logIn)
+
 
 
 // HIDDEN LOGO ADD TO HOMEPAGE
@@ -193,14 +195,14 @@ function generateMessageHome() {
 }
 
 function logIn(){
-//
-//   console.log(signInName)
-// var signInButton = document.querySelector(`.signin-button`)
+
 
 event.preventDefault()
-nameBox.classList.add('hidden')
-loginGreeting.innerText = `<h4 class='greeting'>${signInName}</h4>`
-console.log(greeting)
+
+var username = signInName.value
+loginGreeting.innerText = `Nameste ${username}! Welcome.`;
+
+  console.log(username)
 }
 
 

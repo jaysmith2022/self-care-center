@@ -10,14 +10,11 @@ html {
   height: 100%;
 }
 
+
 .hidden {
 display: none;
 }
-/*
-#testing p:nth-of-type(1) {
-  color: white;
-  font-weight: bold;
-} */
+
 
 
 body {
@@ -34,26 +31,44 @@ color: #ffffff;
 
 }
 
-p {
-    margin-left: 10px;
-    font-weight: bold;
+
+.signin-button {
+background-color: #134d71;
+color: #ffffff;
+font-family: 'Quicksand', sans-serif;
+border-radius: 5px;
 }
 
+
+p {
+margin-left: 0px;
+font-weight: bold;
+}
+
+.name-container {
+margin-top: -200px;
+margin-bottom: 180px;
+}
+
+
 .header {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: stretch;
-  align-content: stretch;
-  height: 140px;
-  width: 500px;
-  font-size: 40px;
-  font-family: 'Quicksand', sans-serif;
+display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: space-between;
+align-items: stretch;
+align-content: stretch;
+height: 140px;
+width: 500px;
+font-size: 40px;
+font-family: 'Quicksand', sans-serif;
+
+
 }
 h1, h2 {
   color: #ffffff;
 }
+
 
 h2 {
   margin: auto;
@@ -61,12 +76,13 @@ h2 {
   margin-right: auto;
   height: 0px;
   width: 500px;
-
 }
+
+
 h3 {
-    margin-bottom: -20px
-
+margin-bottom: -20px
 }
+
 
 .main-page {
   	display: flex;
@@ -79,18 +95,8 @@ h3 {
     color: black;
   }
 
-  .login-page {
-    	display: flex;
-    	flex-direction: column;
-    	flex-wrap: nowrap;
-    	justify-content: space-between;
-    	align-items: stretch;
-    	align-content: stretch;
-      font-family: 'Quicksand', sans-serif;
-    }
 
 .choice-box {
-
   display: flex;
   margin: 60px;
   margin-left: auto;
@@ -106,8 +112,8 @@ h3 {
   padding: 0%;
   position: relative;
   border-radius: 10px;
-
 }
+
 
 
 label[for=affirmation] {
@@ -115,9 +121,12 @@ label[for=affirmation] {
   font-family: 'Quicksand', sans-serif;
 }
 
+
 #affirmation {
   margin-top: : 20px;
 }
+
+
 
 .receive-message {
   background-color: #134d71;
@@ -126,8 +135,8 @@ label[for=affirmation] {
   font-family: 'Quicksand', sans-serif;
   margin-top: 30px;
   width: 200px;
-
 }
+
 
 .message-output-box {
   display: flex;
@@ -144,6 +153,8 @@ label[for=affirmation] {
   position: relative;
   border-radius: 10px;
 }
+
+
 .meditate-img {
   max-width: 9%;
   align-items: center;
