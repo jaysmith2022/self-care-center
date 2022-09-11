@@ -1,4 +1,4 @@
-//class
+// MESSAGE CLASS
 class Message {
   constructor(mantra, affirmation) {
     this.id = Date.now();
@@ -10,7 +10,7 @@ class Message {
 
 
 
-//Mantra
+//MANTRA VARIABLE ARRAY
 var mantra = [
 
 `Breathing in, I send myself love. Breathing out, I send love to someone else who needs it.`,
@@ -43,8 +43,40 @@ var mantra = [
 
 `I am the sky, the rest is weather.`,
 
+`My mind is brilliant. My body is healthy. My spirit is tranquil.`,
+
+`I create my own path and walk it with joy.`,
+
+`My positive thoughts guide me to new heights.`,
+
+`I am conquering my fears and becoming stronger each day.`,
+
+`I will have a good day, because it’s my choice.`,
+
+`I am not afraid to be wrong.`,
+
+`My body is a temple. I keep my temple clean.`,
+
+`I hold the key to better health through eating better and exercise.`,
+
+`Good health is a practice, and I have patience.`,
+
+`I listen to my body and give it what it needs.`,
+
+`Every cell in my body is alive and beautiful.`,
+
+`My potential is limitless, and I choose where to spend my energy.`,
+
+`While I support others, I also ask for help when needed.`,
+
+`I surrender to the flow and have faith in the ultimate good.`,
+
+`I will speak with confidence and self-assurance.`,
+
+`My commitment to myself is unbreakable.`,
 ]
 
+// AFFIRMATION VARIABLE ARRAY
 var affirmation = [
 
 `I forgive myself and set myself free.`,
@@ -73,6 +105,33 @@ var affirmation = [
 
 `I manifest perfect health by making smart choices.`,
 
+`I am successful.`,
+
+`I am confident.`,
+
+`I am powerful.`,
+
+`I am strong.`,
+
+`I am getting better and better every day.`,
+
+`All I need is within me right now.`,
+
+`I wake up motivated.`,
+
+`I am an unstoppable force of nature.`,
+
+`I am a living, breathing example of motivation.`,
+
+`I am living with abundance.`,
+
+`I am having a positive and inspiring impact on the people I come into contact with.`,
+
+`I am inspiring people through my work.`,
+
+`Today is a phenomenal day.`,
+
+`I am filled with focus.`,
 ]
 
 //querySelectors
@@ -83,43 +142,71 @@ var photoBell = document.querySelector(`.photo`)
 var viewMessageButton = document.querySelector(`.receive-message`)
 var radios = document.querySelectorAll('input')
 var inspirationalMessage = document.querySelector(".inspirational-message")
-var hideLogo = document.querySelector(`.photo`)
+var meditateImg = document.querySelector(`.meditate-img`)
+var mainPage = document.querySelector(`.main-page`)
+var signInButton = document.querySelector(`.signin-button`)
+var signInName = document.querySelector(`.signin-name`)
+var loginGreeting = document.querySelector(`.greeting`)
+var nameBox = document.querySelector(`.name-container`)
+
+//PAGE VIEW
+var mainPage = document.querySelector(`.main-page`)
+var loginPage = document.querySelector('login-page')
 
 
-
-//RANDOM Message VARIABLES
+//RANDOM MESSAGE VARIABLES
 var randomMantra = mantra[getRandomIndex(mantra)];
 var randomAffirmation = affirmation[getRandomIndex(affirmation)];
 
 //Event Listeners
 viewMessageButton.addEventListener(`click`, generateMessageHome);
-hideLogoClick.addEventListener(`click`)
+// signInButton.addEventListener(`click`, logIn);
 
-var newRandomMessage = new Message(randomMantra, randomAffirmation)
-//Page View
+
+// HIDDEN LOGO ADD TO HOMEPAGE
+meditateImg.classList.remove(`hidden`);
+// mainPage.classList.add("hidden")
+
+
+//LOGIN PAGE
+
+
+// mainPage.classList.add("hidden");
+
+
+
+
+
+
+
+//MAIN PAGE VIEW
 function generateMessageHome() {
   var newRandomMessage = new Message(randomMantra, randomAffirmation)
-  event.preventDefault()
   inspirationalMessage.innerText = ``
-  // for (var i = 0; i < newRandomMessage.length; i++) {
-      // inspirationalMessage.innerText = inspirationalMessage.innerText +
-      // `<p class="inspirational-message">${mantra}</p>`
   if (affirmationButton.checked === true) {
     inspirationalMessage.innerText = getRandomIndex(affirmation)
+    meditateImg.classList.add(`hidden`);
   } else if (mantraButton.checked === true) {
     inspirationalMessage.innerText = getRandomIndex(mantra)
-    hiddenLogo()
+    meditateImg.classList.add(`hidden`);
 }
 }
 
-// function hiddenLogo() {
-// if (inspirationalMessage === true) {
-//   .svg = false;
-// }
-// }
+function logIn(){
+//
+//   console.log(signInName)
+// var signInButton = document.querySelector(`.signin-button`)
+
+event.preventDefault()
+nameBox.classList.add('hidden')
+loginGreeting.innerText = `<h4 class='greeting'>${signInName}</h4>`
+console.log(greeting)
+}
 
 
 
+
+// RANDOM INDEX MESSAGE VARIABLE
 function getRandomIndex(array) {
   var index = Math.floor(Math.random() * array.length);
   return array[index]
