@@ -9,7 +9,7 @@ I built a UI with two radial buttons that when choses displays a message. Either
 fork. git clone.
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
+![](https://imgur.com/a/W68aPHp)
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
 We had a total of 4 working days to work on the project. I was in week 3. 
